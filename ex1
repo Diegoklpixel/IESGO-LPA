@@ -1,0 +1,21 @@
+//Diretiva com NameSpace System
+
+using System;
+using System.Text;
+
+public class HelloWorld
+{ 
+    //Acessível em qualquer lugar
+	public static void Main(string[] args) //parâmetro
+	{
+	    //Inserir caracteres especiais
+	    Console.OutputEncoding = Encoding.UTF8;
+	    
+	    //Solicitar o nome do usuario
+		Console.WriteLine ("Olá, qual é o seu nome?");
+		string nome =  Console.ReadLine();
+		
+		//Imprimir no terminal
+		Console.WriteLine($"Ola, {nome}! Voce é especial");
+	}
+}
