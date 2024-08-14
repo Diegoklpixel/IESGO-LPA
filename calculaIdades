@@ -1,0 +1,50 @@
+//Programa em C# em que o usuario insere o nome e o ano de nascimento e o sistema retorna o seu nome e idade
+
+using System;
+using System.Text;
+
+class Programa
+{
+    static void Main()
+    {
+        //Usar o UTF_8 no console
+        Console.OutputEncoding = Encoding.UTF8;
+        
+        //Solicitar ao usuário o seu nome
+        Console.Write("Por favor, insira seu nome: ");
+        string nome = Console.ReadLine();
+        
+        //Solicitar ao usuário a data de nascimento
+        Console.Write("Agora, insira sua data de nascimento (DD/MM/AAAA) : ");
+        string dataInput = Console.ReadLine();
+        
+        //Converter a String data para DataType(DateTime)
+        DateTime data;
+        if (DateTime.TryParseExact(dataInput, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out data))
+        {
+            //Calcular a idade do usuário
+            int idade = CalcularIdade(data);
+            
+            //Responder o usuário no console
+            Console.WriteLine($"Olá, {nome}! Voce tem {idade} anos. ");
+        }
+        else
+        {
+            //mensa de erro
+            Console.WriteLine("Insira uma data de nascimento válidae (dd/mm/aaaa).");
+        }
+        
+        static int CalcularIdade(DateTime data)
+        {
+            //datetime de hoje
+            DateTime hoje = DateTime.Today;
+            
+            //calcular idade
+            int idade = hoje.Year - data.Year;
+            
+            //ajustar idae não tenha completado aniversário
+            if (data.Date > hoje.AddYears(-idade)) idade--;
+            
+            return idade;
+        }
+    }
