@@ -1,0 +1,18 @@
+using System;
+
+class Progran
+{
+    
+    static void Main()
+    {
+
+        // double = ponto flutuante com alta presição e intervalos grandes;
+        
+        // float = ponto flutunate quando a memória é uma preocupação (f)
+        
+        // decimal = cálculos de alta precição (128 bits) = Stock Market
+        
+        // int, long (L), short, byte = numeros interios de diferentes tamanhos
+       
+    }
+}
