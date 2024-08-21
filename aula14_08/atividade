@@ -1,0 +1,26 @@
+using System;
+
+class Progran
+{
+    
+    static void Main()
+    {
+        Console.WriteLine("Digite o nome do funcionario:");
+        string nome = Console.ReadLine();
+        
+        Console.WriteLine("Digite as horas trabalhadas na semana");
+        int horas = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Digite a taxa de pagamento por horas:")
+        double pagamento = Convert.ToDouble(Console.ReadLine());
+
+       Console.WriteLine("Digite o valor das comissões recebidas na semana:")
+       decimal comissao = Convert.ToDecimal(Console.ReadLine());
+       
+       decimal salario = horas * pagamento + comissao;
+       
+       Console.WriteLine($"O funcionario {nome} recebe no total {salario} ");
+        
+       
+    }
+}
