@@ -1,0 +1,22 @@
+using System;
+
+class Progran
+{
+    
+    static void Main()
+    {
+        Console.WriteLine("Digite um número:");
+        double num1 = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Digite um número:");
+        double num2 = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Digite um número:");
+        double num3 = Convert.ToInt32(Console.ReadLine());
+       
+        double media = (num1 + num2 + num3) / 3;
+       
+       Console.WriteLine("A média deles é: " + media);
+       
+    }
+}
